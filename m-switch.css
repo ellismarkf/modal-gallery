@@ -1,0 +1,110 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400);
+img {
+	margin: 0;
+}
+.third {
+	width: 28%;
+	display: block;
+	margin: 0 2.5%;
+	float: left;
+}
+
+.cf:before, .cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+.cf {
+	zoom: 1; 
+}
+.pop-up-presentation {
+	width: 900px;
+	margin: 0 auto;
+}
+.pop-up-presentation a {
+	text-decoration: none;
+	color: black;
+	text-align: center;
+}
+.pop-up-presentation img {
+	margin: 0 auto;
+	display: block;
+}
+.pop-up-presentation h3 {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	font-size: 1.3rem;
+}
+.pop-up-presentation p {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+}
+.portfolio-item-expanded {
+	width: 900px;
+	z-index: 11;
+	box-shadow: 0px 0px 120px black;
+	/*display: none;*/
+	position: absolute;
+	margin: 0 auto;
+	font-family: "Open Sans", sans-serif;
+	color: #444;
+	/*background-color: rgb(16,150,248);*/
+	/*rgb(18,130,243)*/
+	border-bottom: 3px solid rgb(18, 130, 243);
+}
+.gallery {
+	float: left;
+	width: 30%;
+	border: 14px solid rgb(18, 130, 243);
+}
+.gallery-focus img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	box-shadow: 0px 0px 8px rgb(10, 60, 170);
+}
+.gallery-previews {
+	background-color: rgb(18,130,243);
+}
+.gallery-previews img {
+	width: 24%;
+	margin: 5px -.5px -4px 0px;
+	/*border: 2px solid rgb(16,150,248);*/
+	box-shadow: 0px 0px 8px rgb(10, 60, 170);
+}
+.project-description {
+	float: left;
+	width: 60%;
+	padding: 10px 25px 0 30px;
+}
+.retract-item-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border-radius: 100px;
+	border: 2px solid rgb(16, 150, 248);
+	display: block;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	line-height: 19px;
+	color: rgb(16, 150, 248);
+}
+.retract-item-button:hover {
+	cursor: pointer;
+	color: rgb(18, 130, 243);
+	border-color: rgb(18, 130, 243);
+}
+.backdrop {
+	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	bottom: 0;
+ 	left: 0;
+ 	background-color: rgba(0,0,0,0.6);
+ 	z-index: 10;
+}
