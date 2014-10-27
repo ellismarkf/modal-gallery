@@ -2,59 +2,112 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="m-switch.css">
+	<link rel="stylesheet" type="text/css" href="strikingly-style.css">
 	<link rel="stylesheet" type="text/css" href="animations.css">
 </head>
 <body>
-	<div class="pop-up-presentation cf">
-		<div class="third">
-			<a href="#first" class="portfolio-item-preview">
-				<img src="http://a2.mzstatic.com/us/r30/Purple2/v4/15/76/17/157617a8-8109-f287-7246-687d153e7a84/mzl.sadczkzs.175x175-75.jpg">
-				<h3>JamFan</h3>
-				<p>A brief teaser description of the project. Just enough to get you interested, but not so much that it's boring or overwhelming. Nice.</p>
-			</a>
+	<div class="pop-up-presentation">
+		<div class="row cf">
+			<div class="third">
+				<a href="#" id="jamfan" class="portfolio-item-preview">
+					<img src="http://a2.mzstatic.com/us/r30/Purple2/v4/15/76/17/157617a8-8109-f287-7246-687d153e7a84/mzl.sadczkzs.175x175-75.jpg">
+					<span class="mask"></span>
+					<h3>JamFan</h3>
+					<p>See the top stories for your favorite artists and bands all in one place, and stay up-to-date on the music you love right at your fingertips!</p>
+				</a>
+			</div>
+			<div class="third">
+				<a href="#" id="bean-mobile" class="portfolio-item-preview">
+					<img src="http://a1.mzstatic.com/us/r30/Purple4/v4/0d/46/83/0d468328-91e1-a0f2-7398-6642cfc1d0ce/mzl.bcrzfjpz.175x175-75.jpg">
+					<span class="mask"></span>
+					<h3>Beanstream Mobile</h3>
+					<p>Axee handled the product design, architecture, and development of Beanstream's entry to the mobile payments world.</p>
+				</a>
+			</div>
+			<div class="third">
+				<a href="#" id="umote" class="portfolio-item-preview">
+					<img src="http://a3.mzstatic.com/us/r30/Purple4/v4/5f/1f/62/5f1f626e-502d-4b7f-1bd9-4366d2e92d7a/mzl.jtdkdkoo.175x175-75.jpg">
+					<span class="mask"></span>
+					<h3>Universal Remote</h3>
+					<p>We worked closely with AT&T's internal U-verse and speech-to-text development teams to build this app.</p>
+				</a>
+			</div>
+		</div>
+		<div class="row cf">
+			<div class="third">
+				<a href="#" id="home" class="portfolio-item-preview">
+					<img src="http://a1.mzstatic.com/us/r30/Purple2/v4/89/af/72/89af72e5-4059-1b1e-c5a1-e811ecce5225/mzl.jvikyghz.175x175-75.jpg">
+					<span class="mask"></span>
+					<h3>FindMyHome</h3>
+					<p>See the top stories for your favorite artists and bands all in one place, and stay up-to-date on the music you love right at your fingertips!</p>
+				</a>
+			</div>
+			<div class="third">
+				<a href="#" id="network" class="portfolio-item-preview">
+					<img src="http://a2.mzstatic.com/us/r30/Purple4/v4/fe/c8/49/fec849c3-fd74-672e-c4ad-46db03c4320e/mzl.drsudlag.175x175-75.jpg">
+					<span class="mask"></span>
+					<h3>CanWeNetwork</h3>
+					<p>Use CanWeNetwork to build a better, stronger, more successful global business network now! Wall St Journal, the Washington Post & LA Times are all buzzing about this business networking app.</p>
+				</a>
+			</div>
+			<div class="third">
+				<a href="#" id="revcoin" class="portfolio-item-preview">
+					<img src="http://cdn.appato.com/rev-worldwide/rev-coin/icon/256">
+					<span class="mask"></span>
+					<h3>RevCoin</h3>
+					<p>See the top stories for your favorite artists and bands all in one place, and stay up-to-date on the music you love right at your fingertips!</p>
+				</a>
+			</div>
+		</div>
+		<div class="row cf">
+			<div class="third">
+				<a href="#" id="bean-ipad" class="portfolio-item-preview">
+					<img src="http://a1.mzstatic.com/us/r30/Purple4/v4/0d/46/83/0d468328-91e1-a0f2-7398-6642cfc1d0ce/mzl.bcrzfjpz.175x175-75.jpg">
+					<span class="mask"></span>
+					<h3>Beanstream for iPad</h3>
+					<p>Axee designed and developed this fully-featured point-of-sale app for Beanstream. Using the lessons we learned from building their iPhone app, we stepped it up a notch with this one.</p>
+				</a>
+			</div>
 		</div>
 
 	</div>
-	<div class="portfolio-item-expanded cf">
-		<!-- left side container -->
-		<div class="gallery">
-			<!-- screenshot focus -->
-			<div class="gallery-focus">
-				<img src="jamfan1.jpeg">
-			</div>
-			<!-- screenshot previews -->
-			<div class="gallery-previews cf">
-				<div class="preview-container">
+	<div class="gallery-container"></div>
+	<script type="text/template" class="gallery-template">
+		<div class='portfolio-item-expanded cf'>
+		
+			<div class='gallery'>
+		
+				<div class='gallery-focus'>
+					<img src=<%= imgs[0] %> />
 				</div>
-				<img src="jamfan1.jpeg"/>
-				<img src="jamfan2.jpeg"/>
-				<img src="jamfan3.jpeg"/>
-				<img src="jamfan4.jpeg"/>
+				
+				<div class='gallery-previews cf'>
+					<% _.each(imgs, function(imageSrc, index){ %>
+						<img src= <%= imgs[index] %> />
+					<% }); %>
+				</div>
+			</div>
+			
+			<div class='project-description'>
+				<span class='retract-item-button'>x</span>
+				<h2><%= title %></h2>
+				<h3><%= subtitle %></h3>
+				<p><%= description1 %></p>
+				<span>FEATURES</span>
+				<ul>
+					<% _.each(features, function(feature, index){ %>
+						<li><%= features[index] %></li>
+					<% }); %>
+				</ul>
+				<p class='last-description'><%= description2 %></p>
+				<a href=<%= link %> target='_blank'>Get <%= title %> now!</a>
 			</div>
 		</div>
-		<!-- 	right side container -->
-		<div class="project-description">
-			<h2>JAMFAN</h2>
-			<h3>Breaking News For Your Favorite Music!</h3>
-			<p>See the top stories for your favorite artists and bands all in one place, and stay up-to-date on the music you love right at your fingertips! Be the first to see news and concert updates for all your favorite musicians!</p>
-			<span>FEATURES</span>
-			<ul>
-				<li>Allow Push Notifications To Receive News Alerts And Updates!</li>
-				<li>Pick the musicians you love and get real-time updates so you can see your favorite artists' news first.</li>
-				<li>Share what you find with all your friends through Facebook, Twitter, Text, or Email.</li>
-			</ul>
-			<p>Open up JamFan for concert updates, pictures, and music videos from all of the best sources on the internet - national websites, local papers, Twitter, blogs, and JamFan.</p>
-			<a href="https://itunes.apple.com/us/app/jamfan/id812540294">Get JAMFAN now!</a>
-			<span class="retract-item-button">x</span>
-		</div>
-	</div>
-	<span class="event-trigger"></span>
-	<span class="event-trigger"></span>
-	<span class="event-trigger"></span>
-	<span class="event-trigger"></span>
-	<span class="event-trigger"></span>
+	</script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+	<script type="text/javascript" src="http:////cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+
 	<script type="text/javascript" src="js/m-switch.js"></script>
 </body>
 </html>
