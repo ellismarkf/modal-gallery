@@ -1,0 +1,211 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400);
+#s-content.s-black-theme .dummy-shadow {border-top: 1px solid #aaa; border-bottom: 1px solid #aaa;}
+#s-content.s-black-theme .button-container a.button-component {background:rgb(16,150,248);}
+#s-content.s-black-theme .button-container a.button-component:hover {background:rgb(18,130,243);}
+img {
+	margin: 0;
+}
+.third {
+	width: 28%;
+	display: block;
+	margin: 0 2.5% 20px;
+	float: left;
+	position: relative;
+}
+.cf:before, .cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+.cf {
+	zoom: 1; 
+}
+.pop-up-presentation a {
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	z-index: 2;
+}
+.pop-up-presentation img {
+	margin: 0 auto;
+	display: block;
+	width: 175px;
+	height: 175px;
+}
+.pop-up-presentation h3 {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.3rem;
+margin: 1.5rem 0px;
+}
+.pop-up-presentation h3 strong {
+font-weight: bold;
+}
+.pop-up-presentation p {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+line-height: 1.5rem;
+}
+span.mask {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 1;
+	margin-left: -88.5px;
+	width: 177px;
+	overflow: hidden;
+	height: 177px;
+	background: url(https://s.mzstatic.com/htmlResources/F4E5/web-storefront/images/mask175.png) 0 0 no-repeat;
+	background-size: 177px 175px;
+}
+.portfolio-item-expanded {
+	width: 900px;
+        top: 23%;
+        left: 50%;
+	z-index: -11;
+	box-shadow: 0px 0px 120px black;
+	position: fixed;
+	margin-left: -450px;
+	font-family: "Open Sans", sans-serif;
+	color: #444;
+	background-color: white;
+	border-bottom: 3px solid rgb(18, 130, 243);
+	opacity: 0;
+}
+.gallery {
+	float: left;
+	width: 30%;
+	border: 14px solid rgb(18, 130, 243);
+}
+.gallery-focus img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	box-shadow: 0px 0px 8px rgb(10, 60, 170);
+}
+.gallery-previews {
+	background-color: rgb(18,130,243);
+        box-sizing: border-box;
+}
+.gallery-previews img {
+	width: 24%;
+	margin: 5px -.8px -4px 0px;
+	/*border: 2px solid rgb(16,150,248);*/
+	box-shadow: 0px 0px 8px rgb(10, 60, 170);
+	cursor: pointer;
+}
+.project-description {
+	float: left;
+	width: 60%;
+	padding: 10px 25px 0 30px;
+}
+.project-description h2 {
+	font-size: xx-large;
+margin: 1.5rem 0;
+}
+.project-description ul {
+padding: 15px 30px;
+list-style: disc outside none;
+}
+.project-description ul li {
+  margin-bottom: .6rem;
+} 
+p.last-description {
+	margin-bottom: 30px;
+}
+.project-description h3, .project-description p {
+	font-weight: 300;
+margin-bottom: 1.5rem;
+line-height: 1.4rem;
+}
+.project-description a {
+	display: block;
+	line-height: 40px;
+	height: 40px;
+	width: 260px;
+	text-align: center;
+	background-color: rgb(16, 150, 248);
+	color: white;
+	position: relative;
+	left: 50%;
+	bottom: -20px;
+	margin-left: -130px;
+	text-decoration: none;
+	border-radius: 4px;
+}
+.project-description a:hover {
+	background-color: rgb(18, 130, 243);
+}
+.retract-item-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border-radius: 100px;
+	border: 2px solid rgb(16, 150, 248);
+	display: block;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	line-height: 18px;
+	color: rgb(16, 150, 248);
+}
+.retract-item-button:hover {
+	cursor: pointer;
+	color: rgb(18, 130, 243);
+	border-color: rgb(18, 130, 243);
+}
+.backdrop {
+	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	bottom: 0;
+ 	left: 0;
+ 	background-color: rgba(0,0,0,0.6);
+ 	z-index: 10;
+}
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+Copyright (c) 2014 Daniel Eden
+*/
+
+@media screen and (max-width: 720px) {
+	.third {
+	  float: none;
+	  width: 100%;
+	  margin-bottom: 50px;
+	}
+	.portfolio-item-expanded {
+	  width: 90%;
+	  margin-left: 6%;
+	  left: 0px;
+	  position: absolute;
+	}
+	.gallery {
+	  width: initial;
+	float: none;
+	}
+	.project-description {
+	  box-sizing: border-box;
+	float: none;
+	width: initial;
+	}
+	.project-description a {
+	  left: 0px;
+	  bottom: 0px;
+	  margin-left: 0px;
+	  margin: 30px auto;
+	  width: inherit;
+	}
+	.retract-item-button {
+	top: inherit;
+	}
+}
