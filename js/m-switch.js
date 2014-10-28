@@ -183,6 +183,11 @@ linkContainer.addEventListener('click', function(event){
 	function fadeOutGallery () {
 		gallery.classList.add(animated, fadeOut);
 	}
+	var projects = selectClassInstance('pop-up-presentation', 0);
+	var projectsDivYCoord = getOffsetRect(projects).top;
+	debugger;
+	gallery.style.top = (window.scrollY - projectsDivYCoord + 50).toString() + 'px';
+	
 	if(window.innerWidth < 719) {
 		var projects = selectClassInstance('pop-up-presentation', 0);
 		var projectsDivYCoord = getOffsetRect(projects).top;
